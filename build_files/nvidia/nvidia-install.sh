@@ -73,7 +73,7 @@ else
 fi
 
 NVIDIA_RPMS=(
-    "${AKMODNV_PATH}"/nvidia/*."$(rpm -E '%{_arch}')".rpm
+    "${AKMODNV_PATH}"/nvidia/*.{noarch,"$(rpm -E '%{_arch}')"}.rpm
     nvidia-container-toolkit
     "${VARIANT_PKGS[@]}"
     "${AKMODNV_PATH}"/kmods/kmod-nvidia-"${KERNEL_VERSION}"-"${NVIDIA_AKMOD_VERSION}"."${DIST_ARCH}".rpm
